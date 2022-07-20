@@ -52,7 +52,7 @@
 
 	.macro set_sctlr_el1
 		mrs	x0, sctlr_el1
-		orr	x0, x0, #SCTLR_I
+		bic	x0, x0, #SCTLR_I
 		orr	x0, x0, #SCTLR_SA
 		orr	x0, x0, #SCTLR_SPAN
 #if defined(CFG_CORE_RWDATA_NOEXEC)
@@ -519,11 +519,11 @@ LOCAL_FUNC enable_mmu , : , .identity_map
 	isb
 
 	/* Enable I and D cache */
-	mrs	x1, sctlr_el1
+	/* mrs	x1, sctlr_el1
 	orr	x1, x1, #SCTLR_I
 	orr	x1, x1, #SCTLR_C
 	msr	sctlr_el1, x1
-	isb
+	isb */
 
 	/* Adjust stack pointers and return address */
 	msr	spsel, #1
