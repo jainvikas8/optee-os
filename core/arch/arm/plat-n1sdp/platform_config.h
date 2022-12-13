@@ -42,6 +42,9 @@
 #define GICC_BASE		0x2C000000
 #define GICR_BASE		0x300C0000
 
+#define EXT_DT_BASE		0x04001600
+#define EXT_DT_SIZE		0x200
+
 #ifndef UART_BAUDRATE
 #define UART_BAUDRATE		115200
 #endif
