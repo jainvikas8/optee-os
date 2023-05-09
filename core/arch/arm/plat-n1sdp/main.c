@@ -34,7 +34,7 @@ register_phys_mem_pgdir(MEM_AREA_IO_SEC, CONSOLE_UART_BASE, PL011_REG_SIZE);
 register_phys_mem_pgdir(MEM_AREA_EXT_DT, EXT_DT_BASE, EXT_DT_SIZE);
 
 register_ddr(DRAM0_BASE, DRAM0_SIZE);
-register_ddr(DRAM1_BASE, DRAM1_SIZE);
+//register_ddr(DRAM1_BASE, DRAM1_SIZE);
 
 register_phys_mem_pgdir(MEM_AREA_IO_SEC, GICD_BASE, GIC_DIST_REG_SIZE);
 register_phys_mem_pgdir(MEM_AREA_IO_SEC, GICC_BASE, GIC_DIST_REG_SIZE);
